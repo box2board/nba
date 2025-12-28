@@ -1,25 +1,28 @@
-export default function HomePage() {
+function Card({ title, children }) {
   return (
-    <main style={{ padding: "24px", maxWidth: "900px", margin: "0 auto" }}>
-      <h1 style={{ fontSize: "32px", marginBottom: "8px" }}>
-        🏀 Box2Board — NBA
-      </h1>
+    <section className="card">
+      <div className="cardHeader">
+        <h2>{title}</h2>
+      </div>
+      <div className="cardBody">{children}</div>
+    </section>
+  );
+}
 
-      <p style={{ color: "#555", marginBottom: "24px" }}>
-        Live lines, props, and analytics coming soon.
-      </p>
-
-      <section>
-        <h2 style={{ fontSize: "22px", marginBottom: "12px" }}>
-          Today’s Focus
-        </h2>
-
-        <ul>
+export default function Page() {
+  return (
+    <div className="grid">
+      <Card title="Today’s Focus">
+        <ul className="list">
           <li>Spreads</li>
           <li>Totals</li>
           <li>Player Props</li>
         </ul>
-      </section>
-    </main>
-  );
-}
+        <p className="muted">
+          Next up: auto-pull today’s lines and display star/thumb ratings with
+          explanations.
+        </p>
+      </Card>
+
+      <Card title="Today’s Lines (placeholder)" >
+        <div id="lines" className="
