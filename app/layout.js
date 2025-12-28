@@ -1,12 +1,12 @@
 export const metadata = {
-  title: "Box2Board NBA",
-  description: "NBA lines, trends, and insights"
+  title: "Box2Board — NBA",
+  description: "NBA lines, props, and analytics",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body style={{ margin: 0, fontFamily: "Arial, sans-serif" }}>
+      <body style={{ margin: 0, fontFamily: "system-ui, -apple-system, sans-serif" }}>
         {children}
       </body>
     </html>
